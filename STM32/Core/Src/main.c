@@ -86,8 +86,8 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  int status=1;
-  int counter=2;
+  int status=0;
+  int counter=5;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -96,8 +96,9 @@ int main(void)
   {
 	  	  switch(status){
 	  case 0:
-		  HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, SET);
-		  HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, RESET);
+		  HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, RESET);
+		  HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, SET);
+		  HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, SET);
 		  counter--;
 		  if(counter<=0){
 			  status=1;
@@ -105,12 +106,23 @@ int main(void)
 		  }
 		  break;
 	  case 1:
-		  HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, RESET);
-		  HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, SET);
+		  HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, SET);
+		  HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, RESET);
+		  HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, SET);
 		  counter--;
 		  if(counter<=0){
-			  status=0;
-			  counter=2;
+			  status=2;
+			  counter=3;
+		  }
+		  break;
+	  case 2:
+		  HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, SET);
+		  HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, SET);
+		  HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, RESET);
+		  counter--;
+		  if(counter<=0){
+		  	status=0;
+		  	counter=5;
 		  }
 		  break;
 	  default:
