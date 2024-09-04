@@ -35,15 +35,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  15 .debug_ranges 00000348  00000000  00000000  00024260  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  00015554  00000000  00000000  000245a8  2**0
+ 16 .debug_macro  00015560  00000000  00000000  000245a8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000454d  00000000  00000000  00039afc  2**0
+ 17 .debug_line   0000454b  00000000  00000000  00039b08  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0007983c  00000000  00000000  0003e049  2**0
+ 18 .debug_str    0007986f  00000000  00000000  0003e053  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000b7885  2**0
+ 19 .comment      00000053  00000000  00000000  000b78c2  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00000d30  00000000  00000000  000b78d8  2**2
+ 20 .debug_frame  00000d30  00000000  00000000  000b7918  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -86,40 +86,40 @@ int main(void)
  800014c:	b580      	push	{r7, lr}
  800014e:	b082      	sub	sp, #8
  8000150:	af00      	add	r7, sp, #0
-  /* USER CODE BEGIN 1 */
-	int status=1;
- 8000152:	2301      	movs	r3, #1
- 8000154:	607b      	str	r3, [r7, #4]
-	int counter=2;
- 8000156:	2302      	movs	r3, #2
- 8000158:	603b      	str	r3, [r7, #0]
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
- 800015a:	f000 f939 	bl	80003d0 <HAL_Init>
+ 8000152:	f000 f93d 	bl	80003d0 <HAL_Init>
   /* USER CODE BEGIN Init */
 
   /* USER CODE END Init */
 
   /* Configure the system clock */
   SystemClock_Config();
- 800015e:	f000 f83d 	bl	80001dc <SystemClock_Config>
+ 8000156:	f000 f841 	bl	80001dc <SystemClock_Config>
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
- 8000162:	f000 f877 	bl	8000254 <MX_GPIO_Init>
+ 800015a:	f000 f87b 	bl	8000254 <MX_GPIO_Init>
+  /* USER CODE BEGIN 2 */
+  int status=1;
+ 800015e:	2301      	movs	r3, #1
+ 8000160:	607b      	str	r3, [r7, #4]
+  int counter=2;
+ 8000162:	2302      	movs	r3, #2
+ 8000164:	603b      	str	r3, [r7, #0]
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  switch(status){
+	  	  switch(status){
  8000166:	687b      	ldr	r3, [r7, #4]
  8000168:	2b00      	cmp	r3, #0
  800016a:	d003      	beq.n	8000174 <main+0x28>
@@ -194,7 +194,7 @@ int main(void)
 	  HAL_Delay(1000);
  80001ce:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
  80001d2:	f000 f95f 	bl	8000494 <HAL_Delay>
-	  switch(status){
+	  	  switch(status){
  80001d6:	e7c6      	b.n	8000166 <main+0x1a>
  80001d8:	40010800 	.word	0x40010800
 
@@ -319,15 +319,15 @@ static void MX_GPIO_Init(void)
  800027e:	687b      	ldr	r3, [r7, #4]
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LED_RED_Pin|LED_YELLOW_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LED_RED_Pin|LED_YELLOW_Pin|LED_GREEN_Pin, GPIO_PIN_RESET);
  8000280:	2200      	movs	r2, #0
- 8000282:	2160      	movs	r1, #96	; 0x60
+ 8000282:	21e0      	movs	r1, #224	; 0xe0
  8000284:	480b      	ldr	r0, [pc, #44]	; (80002b4 <MX_GPIO_Init+0x60>)
  8000286:	f000 fb87 	bl	8000998 <HAL_GPIO_WritePin>
 
-  /*Configure GPIO pins : LED_RED_Pin LED_YELLOW_Pin */
-  GPIO_InitStruct.Pin = LED_RED_Pin|LED_YELLOW_Pin;
- 800028a:	2360      	movs	r3, #96	; 0x60
+  /*Configure GPIO pins : LED_RED_Pin LED_YELLOW_Pin LED_GREEN_Pin */
+  GPIO_InitStruct.Pin = LED_RED_Pin|LED_YELLOW_Pin|LED_GREEN_Pin;
+ 800028a:	23e0      	movs	r3, #224	; 0xe0
  800028c:	60bb      	str	r3, [r7, #8]
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
  800028e:	2301      	movs	r3, #1
