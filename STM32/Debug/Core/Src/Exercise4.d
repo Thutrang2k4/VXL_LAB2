@@ -1,5 +1,5 @@
-Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
- ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
+Core/Src/Exercise4.o: ../Core/Src/Exercise4.c ../Core/Inc/Exercise4.h \
+ ../Core/Inc/main.h ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
@@ -20,11 +20,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
- ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
- ../Core/Inc/Exercise1.h ../Core/Inc/main.h ../Core/Inc/Exercise2.h \
- ../Core/Inc/Exercise1.h ../Core/Inc/Exercise4.h \
- ../Core/Inc/Exercise3-5.h ../Core/Inc/Exercise2.h \
- ../Core/Inc/Exercise4.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+
+../Core/Inc/Exercise4.h:
 
 ../Core/Inc/main.h:
 
@@ -71,19 +69,3 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h:
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
-
-../Core/Inc/Exercise1.h:
-
-../Core/Inc/main.h:
-
-../Core/Inc/Exercise2.h:
-
-../Core/Inc/Exercise1.h:
-
-../Core/Inc/Exercise4.h:
-
-../Core/Inc/Exercise3-5.h:
-
-../Core/Inc/Exercise2.h:
-
-../Core/Inc/Exercise4.h:

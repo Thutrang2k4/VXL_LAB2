@@ -11,6 +11,7 @@
      <ITEM name="Message Column Width">671</ITEM>
      <ITEM name="ShowGrid">No</ITEM>
      <ITEM name="Source Column Width">100</ITEM>
+     <ITEM name="Time Column Width">120</ITEM>
      <ITEM name="Version">100</ITEM>
     </PROPERTIES>
    </POPUP>
@@ -333,13 +334,15 @@
    </POPUP>
    <POPUP w="600" x="917" flags="0000002a" y="620" h="400" pid="100" iid="1">
     <PROPERTIES>
+     <ITEM name="Breakpoint 0">"",80003E0,0000,F02D,BBED,1081047320
+</ITEM>
      <ITEM name="CaseSensitive">No</ITEM>
      <ITEM name="DISPADDRS">Yes</ITEM>
      <ITEM name="DISPLNUMS">No</ITEM>
      <ITEM name="DISPOPCODES">No</ITEM>
      <ITEM name="FIXUPBPTS">Yes</ITEM>
      <ITEM name="WordsOnly">No</ITEM>
-     <ITEM name="nBreakpoints">0</ITEM>
+     <ITEM name="nBreakpoints">1</ITEM>
     </PROPERTIES>
    </POPUP>
    <POPUP w="300" x="937" flags="0000000a" y="720" h="300" pid="101" iid="1">
@@ -359,10 +362,10 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="30" x="957" flags="00000008" y="888" h="13" pid="102" iid="1">
+   <POPUP w="258" x="957" flags="00000008" y="888" h="216" pid="102" iid="1">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="22" x="977" flags="00000008" y="908" h="18" pid="191" iid="1">
+   <POPUP w="194" x="977" flags="00000008" y="908" h="281" pid="191" iid="1">
     <PROPERTIES/>
    </POPUP>
   </PWI>
