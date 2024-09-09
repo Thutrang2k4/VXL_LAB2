@@ -10,8 +10,8 @@
 
 #include "main.h"
 
-void init_exercise3();
-void exercise3_run();
+void init_exercise4();
+void exercise4_run();
 void  display7SEG(int count);
 
 #endif /* INC_EXERCISE4_H_ */

@@ -6,7 +6,9 @@
  */
 #include <Exercise4.h>
 
-void init_exercise3(){
+int num=0;
+
+void init_exercise4(){
 	HAL_GPIO_TogglePin(SEG_0_GPIO_Port, SEG_0_Pin);
 	HAL_GPIO_TogglePin(SEG_1_GPIO_Port, SEG_1_Pin);
 	HAL_GPIO_TogglePin(SEG_2_GPIO_Port, SEG_2_Pin);
@@ -16,9 +18,11 @@ void init_exercise3(){
 	HAL_GPIO_TogglePin(SEG_6_GPIO_Port, SEG_6_Pin);
 }
 
-void exercise3_run(int num){
-	num=num%12;
+void exercise4_run(){
 	display7SEG(num);
+	num++;
+	if(num>9)
+		num=0;
 }
 
 void  display7SEG(int count){
