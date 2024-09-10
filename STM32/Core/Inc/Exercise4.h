@@ -13,5 +13,6 @@
 void init_exercise4();
 void exercise4_run();
 void  display7SEG(int count);
+void  display7SEG_2(int count);
 
 #endif /* INC_EXERCISE4_H_ */

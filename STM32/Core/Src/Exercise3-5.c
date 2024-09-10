@@ -35,8 +35,8 @@ void exercise3_5_run(){
 			HAL_GPIO_WritePin(LED_5_GPIO_Port, LED_5_Pin, SET);
 			HAL_GPIO_WritePin(LED_6_GPIO_Port, LED_6_Pin, RESET);
 			HAL_GPIO_WritePin(LED_7_GPIO_Port, LED_7_Pin, RESET);
-			display7SEG(traffic_counter_1);
 			traffic_counter_1--;
+			display7SEG(traffic_counter_1);
 			if(traffic_counter_1<=0){
 				traffic_status_1=GREEN;
 				traffic_counter_1=GREEN;
@@ -49,8 +49,8 @@ void exercise3_5_run(){
 			HAL_GPIO_WritePin(LED_5_GPIO_Port, LED_5_Pin, RESET);
 			HAL_GPIO_WritePin(LED_6_GPIO_Port, LED_6_Pin, SET);
 			HAL_GPIO_WritePin(LED_7_GPIO_Port, LED_7_Pin, RESET);
-			display7SEG(traffic_counter_1);
 			traffic_counter_1--;
+			display7SEG(traffic_counter_1);
 			if(traffic_counter_1<=0){
 				  traffic_status_1=RED;
 				  traffic_counter_1=RED;
@@ -63,8 +63,8 @@ void exercise3_5_run(){
 			HAL_GPIO_WritePin(LED_5_GPIO_Port, LED_5_Pin, RESET);
 			HAL_GPIO_WritePin(LED_6_GPIO_Port, LED_6_Pin, RESET);
 			HAL_GPIO_WritePin(LED_7_GPIO_Port, LED_7_Pin, SET);
-			display7SEG(traffic_counter_1);
 			traffic_counter_1--;
+			display7SEG(traffic_counter_1);
 			if(traffic_counter_1<=0){
 				traffic_status_1=YELLOW;
 				traffic_counter_1=YELLOW;
@@ -82,6 +82,7 @@ void exercise3_5_run(){
 			HAL_GPIO_WritePin(LED_9_GPIO_Port, LED_9_Pin, RESET);
 			HAL_GPIO_WritePin(LED_10_GPIO_Port, LED_10_Pin, RESET);
 			traffic_counter_2--;
+			display7SEG_2(traffic_counter_2);
 			if(traffic_counter_2<=0){
 				traffic_status_2=GREEN;
 				traffic_counter_2=GREEN;
@@ -95,6 +96,7 @@ void exercise3_5_run(){
 			HAL_GPIO_WritePin(LED_9_GPIO_Port, LED_9_Pin, SET);
 			HAL_GPIO_WritePin(LED_10_GPIO_Port, LED_10_Pin, RESET);
 			traffic_counter_2--;
+			display7SEG_2(traffic_counter_2);
 			if(traffic_counter_2<=0){
 				traffic_status_2=RED;
 				traffic_counter_2=RED;
@@ -108,6 +110,7 @@ void exercise3_5_run(){
 			HAL_GPIO_WritePin(LED_9_GPIO_Port, LED_9_Pin, RESET);
 			HAL_GPIO_WritePin(LED_10_GPIO_Port, LED_10_Pin, SET);
 			traffic_counter_2--;
+			display7SEG_2(traffic_counter_2);
 			if(traffic_counter_2<=0){
 				traffic_status_2=YELLOW;
 				traffic_counter_2=YELLOW;

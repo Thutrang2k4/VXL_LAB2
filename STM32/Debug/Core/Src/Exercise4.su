@@ -1,3 +1,4 @@
 Exercise4.c:11:6:init_exercise4	8	static
-Exercise4.c:21:6:exercise4_run	8	static
-Exercise4.c:28:7:display7SEG	16	static
+Exercise4.c:28:6:exercise4_run	8	static
+Exercise4.c:36:7:display7SEG	16	static
+Exercise4.c:131:7:display7SEG_2	16	static
