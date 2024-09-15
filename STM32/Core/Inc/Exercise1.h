@@ -1,7 +1,7 @@
 /*
  * Exercise1.h
  *
- *  Created on: Sep 7, 2024
+ *  Created on: Sep 15, 2024
  *      Author: LENOVO
  */
 
@@ -9,9 +9,8 @@
 #define INC_EXERCISE1_H_
 
 #include "main.h"
-
-#define RED 5
-#define YELLOW 2
+#include "Display7SEG.h"
+#include "sortware_time.h"
 
 void init_exercise1();
 void exercise1_run();

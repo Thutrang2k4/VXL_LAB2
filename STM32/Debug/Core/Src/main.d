@@ -21,10 +21,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
- ../Core/Inc/Exercise1.h ../Core/Inc/main.h ../Core/Inc/Exercise2.h \
- ../Core/Inc/Exercise1.h ../Core/Inc/Exercise4.h \
- ../Core/Inc/Exercise3-5.h ../Core/Inc/Exercise2.h \
- ../Core/Inc/Exercise4.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
+ ../Core/Inc/sortware_time.h ../Core/Inc/main.h ../Core/Inc/Display7SEG.h \
+ ../Core/Inc/Exercise1.h ../Core/Inc/Display7SEG.h \
+ ../Core/Inc/sortware_time.h
 
 ../Core/Inc/main.h:
 
@@ -72,18 +73,18 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 
-../Core/Inc/Exercise1.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
+
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
+
+../Core/Inc/sortware_time.h:
 
 ../Core/Inc/main.h:
 
-../Core/Inc/Exercise2.h:
+../Core/Inc/Display7SEG.h:
 
 ../Core/Inc/Exercise1.h:
 
-../Core/Inc/Exercise4.h:
+../Core/Inc/Display7SEG.h:
 
-../Core/Inc/Exercise3-5.h:
-
-../Core/Inc/Exercise2.h:
-
-../Core/Inc/Exercise4.h:
+../Core/Inc/sortware_time.h:

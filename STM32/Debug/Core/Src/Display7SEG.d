@@ -1,5 +1,5 @@
-Core/Src/Exercise3-5.o: ../Core/Src/Exercise3-5.c \
- ../Core/Inc/Exercise3-5.h ../Core/Inc/main.h \
+Core/Src/Display7SEG.o: ../Core/Src/Display7SEG.c \
+ ../Core/Inc/Display7SEG.h ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -22,9 +22,10 @@ Core/Src/Exercise3-5.o: ../Core/Src/Exercise3-5.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
- ../Core/Inc/Exercise2.h ../Core/Inc/Exercise1.h ../Core/Inc/Exercise4.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 
-../Core/Inc/Exercise3-5.h:
+../Core/Inc/Display7SEG.h:
 
 ../Core/Inc/main.h:
 
@@ -72,8 +73,6 @@ Core/Src/Exercise3-5.o: ../Core/Src/Exercise3-5.c \
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 
-../Core/Inc/Exercise2.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 
-../Core/Inc/Exercise1.h:
-
-../Core/Inc/Exercise4.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
