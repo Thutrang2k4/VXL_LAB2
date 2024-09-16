@@ -8,7 +8,7 @@
   <PWI>
    <POPUP w="800" x="277" flags="00000002" y="208" h="200" pid="0" iid="-1">
     <PROPERTIES>
-     <ITEM name="Message Column Width">671</ITEM>
+     <ITEM name="Message Column Width">550</ITEM>
      <ITEM name="ShowGrid">No</ITEM>
      <ITEM name="Source Column Width">100</ITEM>
      <ITEM name="Time Column Width">120</ITEM>
@@ -334,7 +334,7 @@
    </POPUP>
    <POPUP w="600" x="917" flags="0000002a" y="620" h="400" pid="100" iid="1">
     <PROPERTIES>
-     <ITEM name="Breakpoint 0">"",8000EAC,0000,0CE4,BBED,2139844520
+     <ITEM name="Breakpoint 0">"",8000EBC,0000,0CE4,BBED,2139844520
 </ITEM>
      <ITEM name="CaseSensitive">No</ITEM>
      <ITEM name="DISPADDRS">Yes</ITEM>
@@ -362,10 +362,10 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="258" x="957" flags="00000008" y="888" h="216" pid="102" iid="1">
+   <POPUP w="30" x="957" flags="00000008" y="888" h="13" pid="102" iid="1">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="194" x="977" flags="00000008" y="908" h="281" pid="191" iid="1">
+   <POPUP w="22" x="977" flags="00000008" y="908" h="18" pid="191" iid="1">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="16" x="1049" flags="0000000a" y="196" h="32" pid="221" iid="1">
