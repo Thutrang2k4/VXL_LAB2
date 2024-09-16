@@ -1,5 +1,6 @@
-"./Core/Src/Display7SEG.o"
 "./Core/Src/Exercise1.o"
+"./Core/Src/Exercise2.o"
+"./Core/Src/Output.o"
 "./Core/Src/main.o"
 "./Core/Src/software_time.o"
 "./Core/Src/stm32f1xx_hal_msp.o"

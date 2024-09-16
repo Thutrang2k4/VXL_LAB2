@@ -1,0 +1,3 @@
+Output.c:10:6:init_7SEG	8	static
+Output.c:19:6:init_ledred	8	static
+Output.c:23:7:display7SEG	16	static

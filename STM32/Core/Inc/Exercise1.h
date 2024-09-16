@@ -8,8 +8,8 @@
 #ifndef INC_EXERCISE1_H_
 #define INC_EXERCISE1_H_
 
+#include "Output.h"
 #include "main.h"
-#include "Display7SEG.h"
 #include "sortware_time.h"
 
 void init_exercise1();

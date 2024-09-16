@@ -18,13 +18,14 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+#include <Output.h>
 #include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "sortware_time.h"
-#include "Display7SEG.h"
 #include "Exercise1.h"
+#include "Exercise2.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -95,10 +96,11 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  init_exercise1();
+  init_7SEG();
+  init_exercise2();
   while (1)
   {
-	  exercise1_run();
+	  exercise2_run();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

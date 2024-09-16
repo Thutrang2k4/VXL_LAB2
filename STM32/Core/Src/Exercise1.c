@@ -13,10 +13,6 @@ void init_exercise1(){
 	  setTimer_led7seg(50);
 }
 void exercise1_run(){
-	  if(timer_ledred_flag==1){
-		  setTimer_ledred(100);
-		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
-	  }
 	  if(timer_led7seg_flag==1){
 		  setTimer_led7seg(50);
 		  switch(num){
@@ -35,5 +31,9 @@ void exercise1_run(){
 		  		default:
 		  			break;
 		  	}
+	  }
+	  if(timer_ledred_flag==1){
+	  		  setTimer_ledred(100);
+	  		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
 	  }
 }

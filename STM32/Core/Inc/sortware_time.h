@@ -11,8 +11,11 @@
 
 extern int timer_ledred_flag;
 extern int timer_led7seg_flag;
+extern int timer_clock_flag;
+
 void setTimer_ledred(int duration);
 void setTimer_led7seg(int duration);
+void setTimer_clock(int duration);
 void timer_run();
 
 #endif /* INC_SORTWARE_TIME_H_ */

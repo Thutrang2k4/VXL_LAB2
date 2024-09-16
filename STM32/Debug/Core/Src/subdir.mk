@@ -5,8 +5,9 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/Src/Display7SEG.c \
 ../Core/Src/Exercise1.c \
+../Core/Src/Exercise2.c \
+../Core/Src/Output.c \
 ../Core/Src/main.c \
 ../Core/Src/software_time.c \
 ../Core/Src/stm32f1xx_hal_msp.c \
@@ -16,8 +17,9 @@ C_SRCS += \
 ../Core/Src/system_stm32f1xx.c 
 
 OBJS += \
-./Core/Src/Display7SEG.o \
 ./Core/Src/Exercise1.o \
+./Core/Src/Exercise2.o \
+./Core/Src/Output.o \
 ./Core/Src/main.o \
 ./Core/Src/software_time.o \
 ./Core/Src/stm32f1xx_hal_msp.o \
@@ -27,8 +29,9 @@ OBJS += \
 ./Core/Src/system_stm32f1xx.o 
 
 C_DEPS += \
-./Core/Src/Display7SEG.d \
 ./Core/Src/Exercise1.d \
+./Core/Src/Exercise2.d \
+./Core/Src/Output.d \
 ./Core/Src/main.d \
 ./Core/Src/software_time.d \
 ./Core/Src/stm32f1xx_hal_msp.d \
