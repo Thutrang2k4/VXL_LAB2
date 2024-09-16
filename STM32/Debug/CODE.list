@@ -88,8 +88,8 @@ void init_exercise2(){
 	setTimer_ledred(100);
  8000150:	2064      	movs	r0, #100	; 0x64
  8000152:	f000 fc11 	bl	8000978 <setTimer_ledred>
-	setTimer_led7seg(1);
- 8000156:	2001      	movs	r0, #1
+	setTimer_led7seg(50);
+ 8000156:	2032      	movs	r0, #50	; 0x32
  8000158:	f000 fc22 	bl	80009a0 <setTimer_led7seg>
 	HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, RESET);
  800015c:	2200      	movs	r2, #0
@@ -432,8 +432,8 @@ void exercise2_run(){
  80003d6:	681b      	ldr	r3, [r3, #0]
  80003d8:	2b01      	cmp	r3, #1
  80003da:	d10a      	bne.n	80003f2 <exercise2_run+0x9a>
-	  setTimer_led7seg(1);
- 80003dc:	2001      	movs	r0, #1
+	  setTimer_led7seg(50);
+ 80003dc:	2032      	movs	r0, #50	; 0x32
  80003de:	f000 fadf 	bl	80009a0 <setTimer_led7seg>
 	  update7SEG(index_7SEG++);
  80003e2:	4b0b      	ldr	r3, [pc, #44]	; (8000410 <exercise2_run+0xb8>)

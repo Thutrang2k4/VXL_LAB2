@@ -11,7 +11,7 @@ int num_ledred=0;
 
 void init_exercise2(){
 	setTimer_ledred(100);
-	setTimer_led7seg(1);
+	setTimer_led7seg(50);
 	HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, RESET);
 	HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, RESET);
 	HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, RESET);
@@ -86,7 +86,7 @@ void exercise2_run(){
 			  updateClockBuffer(hour,minute,second);
 	}
 	if(timer_led7seg_flag==1){
-	  setTimer_led7seg(1);
+	  setTimer_led7seg(50);
 	  update7SEG(index_7SEG++);
 	}
 
