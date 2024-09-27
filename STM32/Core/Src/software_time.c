@@ -25,7 +25,7 @@ int timer_animation_counter =0;
 int timer_animation_flag = 0;
 
 int timerCounter[10];
-int timerFlag[10];
+int timer_flag[10];
 
 void setTimer_ledred(int duration){
 	timer_ledred_counter = duration/TICK;
@@ -53,43 +53,15 @@ void setTimer_animation(int duration){
 }
 void setTimer(int index, int counter){
 	timerCounter[index]=counter/TICK;
-	time_flag[index]=0;
+	timer_flag[index]=0;
 }
 void timer_run(){
-	if(timer_ledred_counter > 0){
-		timer_ledred_counter--;
-		if(timer_ledred_counter <= 0){
-			timer_ledred_flag=1;
+	for(int i=0;i<10;i++){
+		if(timerCounter[i]>=0){
+			timerCounter[i]--;
+			if(timerCounter[i]<=0){
+				timer_flag[i]=1;
+			}
 		}
-	}
-	if(timer_dot_counter > 0){
-		timer_dot_counter--;
-		if(timer_dot_counter <= 0){
-			timer_dot_flag=1;
-		}
-	}
-	if(timer_led7seg_counter > 0){
-			timer_led7seg_counter--;
-			if(timer_led7seg_counter <= 0){
-				timer_led7seg_flag=1;
-			}
-	}
-	if(timer_clock_counter > 0){
-			timer_clock_counter--;
-			if(timer_clock_counter <= 0){
-				timer_clock_flag=1;
-			}
-	}
-	if(timer_ledmatrix_counter > 0){
-			timer_ledmatrix_counter--;
-			if(timer_ledmatrix_counter <= 0){
-				timer_ledmatrix_flag=1;
-			}
-	}
-	if(timer_animation_counter > 0){
-			timer_animation_counter--;
-			if(timer_animation_counter <= 0){
-				timer_animation_flag=1;
-			}
 	}
 }

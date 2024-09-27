@@ -1,5 +1,4 @@
-"./Core/Src/Exercise1.o"
-"./Core/Src/Exercise2.o"
+"./Core/Src/Exercise.o"
 "./Core/Src/Output.o"
 "./Core/Src/main.o"
 "./Core/Src/software_time.o"

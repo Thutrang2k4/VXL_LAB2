@@ -23,8 +23,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "sortware_time.h"
-#include "Exercise1.h"
-#include "Exercise2.h"
+#include "Exercise.h"
+#include "Output.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,16 +96,49 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   init_7SEG();
-  init_exercise2();
-	setTimer_ledred(8000);
-	setTimer_dot(100);
-	setTimer_led7seg(50);
-	setTimer_clock(10);
-	setTimer_ledmatrix(250);
-	setTimer_animation(2000);
+  init_exercise();
+  setTimer(0,70);
+  setTimer(1,20);
+  setTimer(2,30);
+  setTimer(3,50);
+  setTimer(4,10);
+  setTimer(5,2000);
+  int index_7SEG = 0;
+  int index_led_matrix = 0;
+  int index_Shift_Left=0;
+  int index_updatestringBuffer=1;
   while (1)
   {
-	  exercise2_run();
+	  if(timer_flag[0]==1){
+		  setTimer(0,1000);
+		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
+	  }
+	  if(timer_flag[1]==1){
+		  setTimer(1,500);
+		  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
+	  }
+	  if(timer_flag[2]==1){
+		  setTimer(2,250);
+		  update7SEG(index_7SEG++);
+	  }
+	  if(timer_flag[3]==1){
+		  setTimer(3,1000);
+		  clocktime();
+		  updateClockBuffer();
+	  }
+	  if(timer_flag[4]==1){
+		  setTimer(4,250);
+		  updateLEDMatrix(index_led_matrix++);
+	  }
+	  if(timer_flag[5]==1){
+		  setTimer(5,2000);
+		  animation_Shift_Left();
+		  index_Shift_Left++;
+		  if(index_Shift_Left==8){
+			  updatestringBuffer(index_updatestringBuffer++);
+			  index_Shift_Left=0;
+		  }
+	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

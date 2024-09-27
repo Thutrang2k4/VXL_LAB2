@@ -10,7 +10,7 @@
 #include "main.h"
 
 #define TICK 10
-extern int time_flag[10];
+extern int timer_flag[10];
 extern int timer_ledred_flag;
 extern int timer_dot_flag;
 extern int timer_led7seg_flag;

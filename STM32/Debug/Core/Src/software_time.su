@@ -5,4 +5,4 @@ software_time.c:42:6:setTimer_clock	16	static
 software_time.c:46:6:setTimer_ledmatrix	16	static
 software_time.c:50:6:setTimer_animation	16	static
 software_time.c:54:6:setTimer	16	static
-software_time.c:58:6:timer_run	4	static
+software_time.c:58:6:timer_run	16	static

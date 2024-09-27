@@ -1,3 +1,4 @@
 Output.c:10:6:init_7SEG	4	static
-Output.c:13:6:init_ledred	8	static
-Output.c:16:7:display7SEG	16	static
+Output.c:13:6:init_exercise	4	static
+Output.c:17:6:init_LEDMatrix	8	static
+Output.c:27:7:display7SEG	16	static

@@ -3,9 +3,9 @@ Exercise2.c:21:6:update7SEG	16	static
 Exercise2.c:62:6:clocktime	4	static
 Exercise2.c:76:6:updateClockBuffer	4	static
 Exercise2.c:85:6:updateMatrixBuffer	48	static
-Exercise2.c:104:6:updatestringBuffer	4	static
-Exercise2.c:116:6:setRowPin	16	static
-Exercise2.c:120:7:init_LEDMatrix	8	static
-Exercise2.c:130:6:updateLEDMatrix	16	static
-Exercise2.c:163:6:animation_Shift_Left	4	static
-Exercise2.c:182:6:exercise2_run	8	static
+Exercise2.c:103:6:updatestringBuffer	16	static
+Exercise2.c:114:6:setRowPin	16	static
+Exercise2.c:118:7:init_LEDMatrix	8	static
+Exercise2.c:128:6:updateLEDMatrix	16	static
+Exercise2.c:161:6:animation_Shift_Left	4	static
+Exercise2.c:180:6:exercise2_run	4	static
