@@ -1,4 +1,8 @@
-software_time.c:17:6:setTimer_ledred	16	static
-software_time.c:21:6:setTimer_led7seg	16	static
-software_time.c:25:6:setTimer_clock	16	static
-software_time.c:29:6:timer_run	4	static
+software_time.c:30:6:setTimer_ledred	16	static
+software_time.c:34:6:setTimer_dot	16	static
+software_time.c:38:6:setTimer_led7seg	16	static
+software_time.c:42:6:setTimer_clock	16	static
+software_time.c:46:6:setTimer_ledmatrix	16	static
+software_time.c:50:6:setTimer_animation	16	static
+software_time.c:54:6:setTimer	16	static
+software_time.c:58:6:timer_run	4	static

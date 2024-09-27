@@ -8,28 +8,16 @@
 
 
 void init_7SEG(){
-	HAL_GPIO_TogglePin(SEG_0_GPIO_Port, SEG_0_Pin);
-	HAL_GPIO_TogglePin(SEG_1_GPIO_Port, SEG_1_Pin);
-	HAL_GPIO_TogglePin(SEG_2_GPIO_Port, SEG_2_Pin);
-	HAL_GPIO_TogglePin(SEG_3_GPIO_Port, SEG_3_Pin);
-	HAL_GPIO_TogglePin(SEG_4_GPIO_Port, SEG_4_Pin);
-	HAL_GPIO_TogglePin(SEG_5_GPIO_Port, SEG_5_Pin);
-	HAL_GPIO_TogglePin(SEG_6_GPIO_Port, SEG_6_Pin);
+	GPIOB -> ODR &= 0xff00;
 }
 void init_ledred(){
 	HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, SET);
 }
-
 void  display7SEG(int count){
+	init_7SEG();
 	switch(count){
 		case 0:
-			HAL_GPIO_WritePin(SEG_0_GPIO_Port, SEG_0_Pin, RESET);
-			HAL_GPIO_WritePin(SEG_1_GPIO_Port, SEG_1_Pin, RESET);
-			HAL_GPIO_WritePin(SEG_2_GPIO_Port, SEG_2_Pin, RESET);
-			HAL_GPIO_WritePin(SEG_3_GPIO_Port, SEG_3_Pin, RESET);
-			HAL_GPIO_WritePin(SEG_4_GPIO_Port, SEG_4_Pin, RESET);
-			HAL_GPIO_WritePin(SEG_5_GPIO_Port, SEG_5_Pin, RESET);
-			HAL_GPIO_WritePin(SEG_6_GPIO_Port, SEG_6_Pin, SET);
+			GPIOB -> ODR |= 0x0040;
 			break;
 		case 1:
 			HAL_GPIO_WritePin(SEG_0_GPIO_Port, SEG_0_Pin, SET);
