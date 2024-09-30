@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000029  00000000  00000000  00020038  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00008fa1  00000000  00000000  00020061  2**0
+ 12 .debug_info   00008d6e  00000000  00000000  00020061  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00001922  00000000  00000000  00029002  2**0
+ 13 .debug_abbrev 000018f9  00000000  00000000  00028dcf  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000a18  00000000  00000000  0002a928  2**3
+ 14 .debug_aranges 000009e8  00000000  00000000  0002a6c8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00000940  00000000  00000000  0002b340  2**3
+ 15 .debug_ranges 00000910  00000000  00000000  0002b0b0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  000168c8  00000000  00000000  0002bc80  2**0
+ 16 .debug_macro  000168c8  00000000  00000000  0002b9c0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000aab9  00000000  00000000  00042548  2**0
+ 17 .debug_line   0000aa0b  00000000  00000000  00042288  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00082532  00000000  00000000  0004d001  2**0
+ 18 .debug_str    000823de  00000000  00000000  0004cc93  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000cf533  2**0
+ 19 .comment      00000053  00000000  00000000  000cf071  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  000028e0  00000000  00000000  000cf588  2**2
+ 20 .debug_frame  000027f0  00000000  00000000  000cf0c4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1825,11 +1825,11 @@ __STATIC_FORCEINLINE void __disable_irq(void)
 	...
 
 08000d0c <setTimer>:
-}
-void setTimer_animation(int duration){
-	timer_animation_counter = duration/TICK;
-	timer_animation_flag = 0;
-}
+#include "sortware_time.h"
+
+int timerCounter[10];
+int timer_flag[10];
+
 void setTimer(int index, int counter){
  8000d0c:	b480      	push	{r7}
  8000d0e:	b083      	sub	sp, #12
